@@ -2,6 +2,8 @@
 
 **Version 1.0.0**
 
+Works On Andoied and IOS.
+
 using restful api service
 
 CRUD Operations on local database or cloud database
@@ -16,4 +18,8 @@ Upload and download file on local server or cloud
 
 save picture as string in database
 
-Works On Andoied and IOS.
+---
+
+## License & copyright
+
+© Reza Ashena 
