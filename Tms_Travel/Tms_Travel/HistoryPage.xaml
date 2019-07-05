@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tms_Travel.HistoryPage"
+             xmlns:converters="clr-namespace:Tms_Travel.ViewModel.Converters">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:DateTimeToStringConverter x:Key="converter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ListView x:Name="postListView"
+              HasUnevenRows="True"
+              IsPullToRefreshEnabled="True"
+              Refreshing="postListView_Refreshing"
+              ItemsSource="{Binding Posts}"
+              SelectedItem="{Binding Postselected}">
+        <ListView.Header>
+            <ContentView Padding="0,5" BackgroundColor="White">
+                <Label FontSize="Large" TextColor="Red"
+                   Text="List of Posts" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+            </ContentView>
+        </ListView.Header>
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    
+                    <ViewCell.ContextActions>
+                        <MenuItem Text="Delete"
+                                  CommandParameter="{Binding }"
+                                  Clicked="Delete_Clicked"
+                                  IsDestructive="True"/>
+                    </ViewCell.ContextActions>
+                    
+                    <StackLayout Padding="5">
+                        <Label Text="{Binding Experience,Mode=TwoWay}" 
+                               FontSize="Medium"/>
+
+                        <Label Text="{Binding CREATEDAT,Converter={StaticResource converter}}" 
+                               FontSize="Small"/>
+
+                        <Grid IsVisible="{Binding IsVisible}">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.7*"/>
+                                <ColumnDefinition Width="0.3*"/>
+                            </Grid.ColumnDefinitions>
+                            <StackLayout Orientation="Horizontal">
+                                <Label x:Name="lblFollow" Text="Follow"  Grid.Row="0" Grid.Column="0"/>
+                                <Switch IsToggled="{Binding IsAttending,Mode=TwoWay}"  Grid.Row="0" Grid.Column="1" Grid.RowSpan="2"  HorizontalOptions="Center"   Toggled="Switch_Toggled" />  
+                            </StackLayout>
+                            
+                        </Grid>
+
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+
+</ContentPage>

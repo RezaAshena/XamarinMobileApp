@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tms_Travel.App">
+    <Application.Resources>
+        <ResourceDictionary>
+          <!-- Pallete -->
+            <Color x:Key="RedColor">#FF0000</Color>
+            <Color x:Key="RedDarker">#AF0000</Color>
+            
+            <Color x:Key="CobaltBlue">#0020C2</Color>
+            <Color x:Key="blueivy">#3090C7</Color>
+            
+            <Color x:Key="WhiteColor">#FFFFFF</Color>
+          
+            <Color x:Key="primary-back-title-color">#EA3913</Color>
+            <Color x:Key="primary-title-color">#FFFFFF</Color>
+          <!-- Pallete-end -->
+
+          <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource RedColor}"/>
+                <Setter Property="TextColor" Value="{StaticResource WhiteColor}"/>
+          </Style>
+          <Style TargetType="Label">
+                <Setter Property="BackgroundColor" Value="{StaticResource WhiteColor}"/>
+                <Setter Property="TextColor" Value="{StaticResource RedColor}"/>
+          </Style>
+            <Style TargetType="Stepper">
+                <Setter Property="BackgroundColor" Value="{StaticResource RedDarker}"/>
+            </Style>  
+          <Style ApplyToDerivedTypes="true" TargetType="NavigationPage">
+            <Setter Property="BarBackgroundColor" Value="{StaticResource Key=primary-back-title-color}"/>
+            <Setter Property="BarTextColor" Value="{StaticResource Key=primary-title-color}"/>
+          </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

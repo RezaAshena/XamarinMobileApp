@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Tms_Travel.ViewModel"
+             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             x:Class="Tms_Travel.ListPicPage">
+    <ContentPage.BindingContext>
+        <local:PicVM/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <StackLayout x:Name="containerStackLayout" VerticalOptions="Center" Spacing="10" Padding="10">
+            <Label Text="List of Pic" FontSize="34" />
+            <ListView x:Name="listPictures"
+                      IsPullToRefreshEnabled="True"
+                      Refreshing="listPictures_Refreshing"
+                      HasUnevenRows="True"
+                      SeparatorVisibility="None"
+                      ItemsSource="{Binding pics}"
+                      SelectedItem="{Binding Picselected}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout BackgroundColor="#eee"
+                                 Orientation="Vertical">
+                                <StackLayout Orientation="Horizontal">
+                                    <controls:CircleImage  HeightRequest="60" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Aspect="AspectFill" WidthRequest="66" Grid.RowSpan="2" Source="{Binding Image}" />
+                                    <StackLayout Orientation="Vertical">
+                                        <Label  VerticalOptions="End" Text="{Binding FileName,Mode=TwoWay}"
+                                                 TextColor="#f35e20" />
+                                        <Label  VerticalOptions="Start" Text="{Binding URL,Mode=TwoWay}"
+                                                 TextColor="#503026" />
+                                        <StackLayout  IsVisible="{Binding IsVisible}"  
+                                                 Orientation="Horizontal"  
+                                                 Margin="0,0,80,0">
+                                               <Button Text="Details"  
+                                                WidthRequest="80"  
+                                                HeightRequest="40"       
+                                                FontSize="12"  
+                                                BackgroundColor="CornflowerBlue"  
+                                                TextColor="DarkBlue" 
+                                                BorderRadius="9"        
+                                                 Clicked="ButtonDetails_Clicked"/>
+                                               <Button Text="Edit"  
+                                                WidthRequest="80" 
+                                                HeightRequest="40"       
+                                                FontSize="12"  
+                                                BackgroundColor="LightCoral"  
+                                                TextColor="Maroon"
+                                                BorderRadius="9"/>
+                                               <Button x:Name="DeleteBtn" Text="Delete"  
+                                                WidthRequest="80" 
+                                                HeightRequest="40"       
+                                                FontSize="12"  
+                                                BackgroundColor="Red"  
+                                                TextColor="White"
+                                                BorderRadius="9"
+                                                 Clicked="DeleteBtn_Clicked" />
+                                            <Switch  Grid.Row="0" Grid.Column="1" Grid.RowSpan="2"  HorizontalOptions="Center" Toggled="Switch_Toggled" IsToggled="{Binding IsSwitchToggled,Mode=TwoWay}" />
+                                        </StackLayout>
+                                    </StackLayout>
+                                </StackLayout>
+                                
+                            </StackLayout>
+
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

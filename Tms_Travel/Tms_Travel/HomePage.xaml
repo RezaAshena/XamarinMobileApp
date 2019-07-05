@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Tms_Travel"
+             x:Class="Tms_Travel.HomePage">
+
+    <TabbedPage.ToolbarItems>
+        <ToolbarItem Text="Add"
+                     Icon="add.png"
+                     Command="{Binding NavCommand}"/>
+    </TabbedPage.ToolbarItems>
+    
+    <local:HistoryPage Title="History"
+                       Icon="home.png"/>
+    <local:UserPage Title="User"
+                    Icon="user.png"/>
+    <local:MapPage Title="Map"
+                   Icon="map.png"/>
+    <local:LocationPage Title="Location"
+                       Icon="location.png"/>
+    <local:TrackingPage Title="Tracking"
+                       Icon="tracking.png"/>
+    <local:ImagePage Title="Pic"
+                     Icon="camera.png"/>
+    <local:ListPicPage Title="Image"
+                   Icon="camera.png"/>
+</TabbedPage>

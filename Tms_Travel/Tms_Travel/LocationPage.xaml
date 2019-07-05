@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tms_Travel.LocationPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="10" Padding="10">
+                <Button x:Name="ButtonCached" Text="Get Last Known Location" Clicked="ButtonCached_Clicked" >
+                    <Button.IsVisible>
+                        <OnPlatform x:TypeArguments="x:Boolean" iOS="true" WinPhone="false" Android="true"/>
+                    </Button.IsVisible>
+                </Button>
+                <Label x:Name="LabelCached"/>
+                <Label Text="Location Options"/>
+
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Include Heading" HorizontalOptions="Center"/>
+                    <Switch x:Name="IncludeHeading" IsToggled="false" HorizontalOptions="Center"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <StackLayout>
+                        <Label BindingContext="{x:Reference Timeout}" Text="{Binding Value,
+                          StringFormat='Timeout = {0:F0} Seconds'}"/>
+                    </StackLayout>
+                    <Stepper x:Name="Timeout" Maximum="60"  Minimum="2" Increment="1" Value="10"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <StackLayout>
+                        <Label BindingContext="{x:Reference DesiredAccuracy}" Text="{Binding Value,
+                          StringFormat='Desired Accuracy = {0:F0} Meters'}"/>
+                    </StackLayout>
+                    <Stepper x:Name="DesiredAccuracy" Maximum="1500"  Minimum="10" Increment="10" Value="500"/>
+                </StackLayout>
+
+                <Button x:Name="ButtonGetGPS" Text="Get Current Location" Clicked="ButtonGetGPS_Clicked"/>
+                <Label x:Name="labelGPS"/>
+
+                <Button x:Name="ButtonAddressForPosition" Text="Get Address for Position" IsEnabled="False" Clicked="ButtonAddressForPosition_Clicked"/>
+                <Label x:Name="LabelAddress"/>
+
+            </StackLayout>
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>

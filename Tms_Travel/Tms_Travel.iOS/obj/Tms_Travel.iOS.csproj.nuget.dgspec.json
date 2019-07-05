@@ -1,0 +1,207 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Reza\\Applications\\Tms_Travel\\Tms_Travel\\Tms_Travel\\Tms_Travel.iOS\\Tms_Travel.iOS.csproj": {}
+  },
+  "projects": {
+    "C:\\Reza\\Applications\\Tms_Travel\\Tms_Travel\\Tms_Travel\\Tms_Travel.iOS\\Tms_Travel.iOS.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Reza\\Applications\\Tms_Travel\\Tms_Travel\\Tms_Travel\\Tms_Travel.iOS\\Tms_Travel.iOS.csproj",
+        "projectName": "Tms_Travel.iOS",
+        "projectPath": "C:\\Reza\\Applications\\Tms_Travel\\Tms_Travel\\Tms_Travel\\Tms_Travel.iOS\\Tms_Travel.iOS.csproj",
+        "packagesPath": "C:\\Users\\Reza_PC\\.nuget\\packages\\",
+        "outputPath": "C:\\Reza\\Applications\\Tms_Travel\\Tms_Travel\\Tms_Travel\\Tms_Travel.iOS\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\ProgramData\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Reza_PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "xamarinios10"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "xamarinios10": {
+            "projectReferences": {
+              "C:\\Reza\\Applications\\Tms_Travel\\Tms_Travel\\Tms_Travel\\Tms_Travel\\Tms_Travel.csproj": {
+                "projectPath": "C:\\Reza\\Applications\\Tms_Travel\\Tms_Travel\\Tms_Travel\\Tms_Travel\\Tms_Travel.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "xamarinios10": {
+          "dependencies": {
+            "Microsoft.Azure.Mobile.Client": {
+              "target": "Package",
+              "version": "[4.0.1, )"
+            },
+            "Microsoft.Azure.Mobile.Client.SQLiteStore": {
+              "target": "Package",
+              "version": "[4.0.1, )"
+            },
+            "Microsoft.Net.Http": {
+              "target": "Package",
+              "version": "[2.2.29, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[11.0.2, )"
+            },
+            "Plugin.Permissions": {
+              "target": "Package",
+              "version": "[4.0.1-beta, )"
+            },
+            "WindowsAzure.Storage": {
+              "target": "Package",
+              "version": "[9.3.2, )"
+            },
+            "Xam.Plugin.Geolocator": {
+              "target": "Package",
+              "version": "[4.5.2-beta, )"
+            },
+            "Xam.Plugin.Media": {
+              "target": "Package",
+              "version": "[4.0.1.5, )"
+            },
+            "Xam.Plugins.Forms.ImageCircle": {
+              "target": "Package",
+              "version": "[3.0.0.5, )"
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[3.6.0.220655, )"
+            },
+            "Xamarin.Forms.Maps": {
+              "target": "Package",
+              "version": "[2.4.0.280, )"
+            },
+            "sqlite-net-pcl": {
+              "target": "Package",
+              "version": "[1.5.231, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    },
+    "C:\\Reza\\Applications\\Tms_Travel\\Tms_Travel\\Tms_Travel\\Tms_Travel\\Tms_Travel.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Reza\\Applications\\Tms_Travel\\Tms_Travel\\Tms_Travel\\Tms_Travel\\Tms_Travel.csproj",
+        "projectName": "Tms_Travel",
+        "projectPath": "C:\\Reza\\Applications\\Tms_Travel\\Tms_Travel\\Tms_Travel\\Tms_Travel\\Tms_Travel.csproj",
+        "packagesPath": "C:\\Users\\Reza_PC\\.nuget\\packages\\",
+        "outputPath": "C:\\Reza\\Applications\\Tms_Travel\\Tms_Travel\\Tms_Travel\\Tms_Travel\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\ProgramData\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Reza_PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "Microsoft.Azure.Mobile.Client": {
+              "target": "Package",
+              "version": "[4.0.1, )"
+            },
+            "Microsoft.Azure.Mobile.Client.SQLiteStore": {
+              "target": "Package",
+              "version": "[4.0.1, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[11.0.2, )"
+            },
+            "Plugin.Permissions": {
+              "target": "Package",
+              "version": "[4.0.1-beta, )"
+            },
+            "WindowsAzure.Storage": {
+              "target": "Package",
+              "version": "[9.3.2, )"
+            },
+            "Xam.Plugin.Geolocator": {
+              "target": "Package",
+              "version": "[4.5.2-beta, )"
+            },
+            "Xam.Plugin.Media": {
+              "target": "Package",
+              "version": "[4.0.1.5, )"
+            },
+            "Xam.Plugins.Forms.ImageCircle": {
+              "target": "Package",
+              "version": "[3.0.0.5, )"
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[3.6.0.220655, )"
+            },
+            "Xamarin.Forms.Maps": {
+              "target": "Package",
+              "version": "[2.4.0.280, )"
+            },
+            "sqlite-net-pcl": {
+              "target": "Package",
+              "version": "[1.5.231, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

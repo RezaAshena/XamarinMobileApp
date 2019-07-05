@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Paths>
+  <AdditionalAndroidResourcePaths>
+    <AdditionalAndroidResourcePath>C:\Users\Reza_PC\AppData\Local\Xamarin\Xamarin.Android.Support.CustomTabs\23.3.0.0\embedded</AdditionalAndroidResourcePath>
+    <AdditionalAndroidResourcePath>C:\Users\Reza_PC\AppData\Local\Xamarin\Xamarin.GooglePlayServices.Base\8.4.0\embedded</AdditionalAndroidResourcePath>
+    <AdditionalAndroidResourcePath>C:\Users\Reza_PC\AppData\Local\Xamarin\Xamarin.GooglePlayServices.Basement\8.4.0\embedded</AdditionalAndroidResourcePath>
+    <AdditionalAndroidResourcePath>C:\Users\Reza_PC\AppData\Local\Xamarin\Xamarin.GooglePlayServices.Maps\8.4.0\embedded</AdditionalAndroidResourcePath>
+  </AdditionalAndroidResourcePaths>
+  <AdditionalJavaLibraryReferences>
+    <AdditionalJavaLibraryReference>C:\Users\Reza_PC\AppData\Local\Xamarin\Xamarin.Android.Support.CustomTabs\23.3.0.0\embedded\classes.jar</AdditionalJavaLibraryReference>
+    <AdditionalJavaLibraryReference>C:\Users\Reza_PC\AppData\Local\Xamarin\Xamarin.GooglePlayServices.Base\8.4.0\embedded\classes.jar</AdditionalJavaLibraryReference>
+    <AdditionalJavaLibraryReference>C:\Users\Reza_PC\AppData\Local\Xamarin\Xamarin.GooglePlayServices.Basement\8.4.0\embedded\classes.jar</AdditionalJavaLibraryReference>
+    <AdditionalJavaLibraryReference>C:\Users\Reza_PC\AppData\Local\Xamarin\Xamarin.GooglePlayServices.Maps\8.4.0\embedded\classes.jar</AdditionalJavaLibraryReference>
+  </AdditionalJavaLibraryReferences>
+  <AdditionalNativeLibraryReferences />
+</Paths>

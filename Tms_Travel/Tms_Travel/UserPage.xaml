@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tms_Travel.UserPage">
+    <ContentPage.Resources>
+        <Style TargetType="Label">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="TextColor" Value="Black"/>
+        </Style>
+        
+        <Style TargetType="Frame">
+            <Setter Property="CornerRadius" Value="15"/>
+            <Setter Property="BackgroundColor" Value="White"/>
+            <Setter Property="WidthRequest" Value="200"/>
+        </Style>
+        
+    </ContentPage.Resources>
+    <ListView x:Name="userListView"
+              IsPullToRefreshEnabled="True"
+              Refreshing="userListView_Refreshing"
+              ItemsSource="{Binding Users}">
+        <ListView.Header>
+            <ContentView Padding="0,5" BackgroundColor="White">
+                <Label x:Name="title" FontSize="Large" TextColor="Red"
+                   Text="List of Users" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+            </ContentView>
+        </ListView.Header>
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <ViewCell.ContextActions>
+                        <MenuItem Text="Delete"
+                                  CommandParameter="{Binding }"
+                                  Clicked="MenuItem_Clicked"
+                                  IsDestructive="True"/>
+                    </ViewCell.ContextActions>
+                        
+                    <StackLayout>
+                        <FlexLayout Direction="Column" Wrap="Wrap"  JustifyContent="SpaceEvenly"  BackgroundColor="Gray">
+                            <Frame>
+                                <FlexLayout>
+                                <Label Text="{Binding Email}"></Label>
+                                </FlexLayout>
+                            </Frame>
+
+                            <Frame>
+                                <FlexLayout >
+                                    <Label Text="{Binding Password}"></Label>
+                               </FlexLayout>
+                            </Frame>
+                        </FlexLayout>
+                    </StackLayout>
+                       
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>
